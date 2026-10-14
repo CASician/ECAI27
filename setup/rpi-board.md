@@ -47,7 +47,8 @@ Wait until the green LED stops blinking, then disconnect the power supply. Remov
 4. Run **Remote-SSH: Connect to Host…**.
 5. Enter `ecai@ecai` and press Enter.
 6. If VS Code asks whether to continue connecting to the host, choose **Continue**.
-7. When prompted, enter the provided Pi password `ecailab` and press Enter.
+7. If prompted to select the operating system of the remote host, choose **Linux**.
+8. When prompted, enter the provided Pi password `ecailab` and press Enter.
 
 Once connected, VS Code opens a remote window for the Raspberry Pi. This password is for the provided lab kit; do not reuse it for personal accounts.
 
@@ -135,32 +136,48 @@ If eduroam is unavailable, a personal Wi-Fi network or mobile hotspot can be con
 
 A VS Code tunnel lets you connect to the Raspberry Pi remotely without connecting through the ethernet cable.
 
-Install VS Code on the Pi:
+::: {.callout-warning}
 
-```bash
-sudo apt update
-sudo apt install code
-```
+## Use your computer's terminal
 
-Then check that the `code` command is available:
+Create and configure the tunnel from your computer's operating-system terminal (such as Terminal on macOS or a Linux terminal, or PowerShell on Windows), not from the terminal inside VS Code.
+:::
 
-```bash
-code --version
-```
+1. Open a terminal.
+2. Connect to the Pi over SSH:
 
-Start a tunnel to authenticate the Pi with your GitHub or Microsoft account and give the tunnel a recognizable name:
+   ```bash
+   ssh ecai@ecai
+   ```
 
-```bash
-code tunnel --name ecai-rpi-<N>
-```
+   When prompted, enter the Pi password `ecailab`.
 
-Replace <N> with your group ID. Follow the displayed sign-in steps. After the tunnel connects successfully, stop this foreground process with `Ctrl+C`, then install it as a service so it starts automatically and persists across logouts and reboots:
+3. Install VS Code on the Pi:
 
-```bash
-code tunnel service install
-```
+   ```bash
+   sudo apt update
+   sudo apt install code
+   ```
 
-Check the terminal output for confirmation that the service was installed. Keep the Pi powered on and connected to Wi-Fi with internet access for the tunnel to be reachable.
+4. Check that the `code` command is available:
+
+   ```bash
+   code --version
+   ```
+
+5. Start a tunnel to authenticate the Pi with your GitHub or Microsoft account and give the tunnel a recognizable name:
+
+   ```bash
+   code tunnel --name ecai-rpi-<N>
+   ```
+
+   Replace `<N>` with your group ID and follow the displayed sign-in steps. After the tunnel connects successfully, stop this foreground process with `Ctrl+C`, then install it as a service so it starts automatically and persists across logouts and reboots:
+
+   ```bash
+   code tunnel service install
+   ```
+
+6. Check the terminal output for confirmation that the service was installed. Keep the Pi powered on and connected to Wi-Fi with internet access for the tunnel to be reachable.
 
 ### One tunnel per user
 
