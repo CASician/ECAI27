@@ -5,6 +5,8 @@ subtitle: "LAB Material and Assignments"
 
 ## 14 October 2026
 
+- **docs: update lab room**
+  - [labs/schedule.md](labs/schedule.md)
 - **docs: clarify VS Code tunnel setup**
   - [setup/rpi-board.md](setup/rpi-board.md)
 
