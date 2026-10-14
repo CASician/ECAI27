@@ -3,6 +3,11 @@ title: "Efficient Computing for AI"
 subtitle: "LAB Material and Assignments"
 ---
 
+## 14 October 2026
+
+- **docs: clarify VS Code tunnel setup**
+  - [setup/rpi-board.md](setup/rpi-board.md)
+
 ## 8 October 2026
 
 - **docs: add Raspberry Pi board setup guide**

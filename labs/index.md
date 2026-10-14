@@ -2,8 +2,6 @@
 title: "Labs"
 ---
 
-Explore the final system built across the labs, browse the lab schedule, and open the AI Computing Optimization assignment.
-
 ## Overview
 
 [See the system we will build across the labs](overview.md).
