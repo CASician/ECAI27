@@ -312,14 +312,14 @@ Specifically:
 
 The compilation produces the benchmarking executable  `./src/vector-add/benchmark`.
 
-The C benchmark programs use dimensions defined as constants near the start of the `main` function. To measure a different size, edit the corresponding   onstants, save the file, rebuild that target, and run it again.
+The C benchmark programs use dimensions defined as constants near the start of the `main` function. To measure a different size, edit the corresponding constants, save the file, rebuild that target, and run it again.
 
-For vector addition, change `n` in `src/vector_add/benchmark.c` with values of  `1024`, `16384`, and `1048576`. Tehn build a run with the commands below:
+For vector addition, change `n` in `src/vector_add/benchmark.c` with values of  `1024`, `16384`, and `1048576`. Then build a run with the commands below:
 
 ```bash
-# Edit n in src/vector_add/benchmark.c, then:
+# Edit length in src/vector_add/benchmark.c, then:
 make vector_add
-srcvector-add/benchmark
+src/vector_add/benchmark
 ```
 
 Collect the reported results (e.g., in a CSV file or a Sheet) for later comparisons.
@@ -388,7 +388,7 @@ Then run the benchmarking with:
 
 ```bash
 make vector_add
-srcvector-add/benchmark
+src/vector_add/benchmark
 ```
 
 Collect the benchmarking results in the table below:
